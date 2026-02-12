@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>💖 Para mi amorcito 💖</title>
+    <meta name="description" content="Una carta especial de San Valentín">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Floating hearts background -->
+    <div class="hearts-container" id="heartsContainer"></div>
+
+    <!-- Sparkle cursor effect -->
+    <div class="sparkle-container" id="sparkleContainer"></div>
+
+    <!-- Main content -->
+    <main class="main-wrapper">
+        <!-- Hero Section -->
+        <section class="hero-section" id="heroSection">
+            <div class="val-container">
+                <div class="valentines">
+                    <div class="val-envelope"></div>
+                    <div class="val-front"></div>
+                    <div class="val-card">
+                        <div class="val-text">Para mi amorcito...</div>
+                        <div class="val-heart"></div>
+                    </div>
+                    <div class="val-hearts">
+                        <div class="val-one"></div>
+                        <div class="val-two"></div>
+                        <div class="val-three"></div>
+                        <div class="val-four"></div>
+                        <div class="val-five"></div>
+                    </div>
+                </div>
+                <div class="val-shadow"></div>
+            </div>
+        </section>
+
+        <!-- Letter Section -->
+        <section class="letter-section hidden" id="letterSection">
+            <div class="letter-card">
+                <div class="letter-decoration top-left">✨</div>
+                <div class="letter-decoration top-right">✨</div>
+                <div class="letter-decoration bottom-left">💕</div>
+                <div class="letter-decoration bottom-right">💕</div>
+
+                <h1 class="letter-title">
+                    <span class="title-line">Mi Vida</span>
+                    <span class="title-heart">💖</span>
+                </h1>
+
+                <div class="letter-content">
+                    <p class="letter-paragraph fade-in-text">
+                        Han pasado <strong>5 años perfectos</strong> a tu lado.
+                        Cinco años de risas, de aventuras, de esos momentos que
+                        hacen que el corazón se acelere solo con verr tus ojitos de vaquita.
+                    </p>
+                    <p class="letter-paragraph fade-in-text">
+                        Cada día contigo ha sido un regalo, y no importa cuántos
+                        San Valentines pasen... siempre quiero que seas
+                        <strong>mi San Valentín</strong>. 🌹
+                    </p>
+                    <p class="letter-paragraph fade-in-text">
+                        Así que, después de 5 años de aguantarme
+                        <em>(que no es poco)</em>, tengo una pregunta
+                        MUY importante que hacerte...
+                    </p>
+                </div>
+
+                <button class="continue-btn" id="continueBtn">
+                    <span>Continuar</span>
+                    <span class="arrow">→</span>
+                </button>
+            </div>
+        </section>
+
+        <!-- Question Section -->
+        <section class="question-section hidden" id="questionSection">
+            <div class="question-card">
+                <div class="question-rings">💗</div>
+                <h2 class="question-title">La Pregunta del Millón</h2>
+                <p class="question-text">
+                    ¿Quieres ser mi San Valentín?
+                </p>
+                <p class="question-subtitle">
+                    (por 5to año consecutivo, porque lo bueno no se cambia 😎)
+                </p>
+
+                <div class="buttons-container" id="buttonsContainer">
+                    <button class="yes-btn" id="yesBtn">
+                        <span class="btn-emoji">💝</span>
+                        <span>¡SÍ, QUIERO!</span>
+                    </button>
+                    <button class="no-btn" id="noBtn">
+                        <span class="btn-emoji">😢</span>
+                        <span>No...</span>
+                    </button>
+                </div>
+
+                <!-- Funny rejection messages -->
+                <div class="rejection-message hidden" id="rejectionMessage">
+                    <p class="rejection-text" id="rejectionText"></p>
+                </div>
+
+                <!-- No counter -->
+                <div class="no-counter hidden" id="noCounter">
+                    <p>Intentos de decir que no: <span id="noCount">0</span> 🤣</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Success Section -->
+        <section class="success-section hidden" id="successSection">
+            <div class="success-card">
+                <div class="confetti-container" id="confettiContainer"></div>
+                <h2 class="success-title">¡¡¡SÍÍÍÍ!!! 🎉🎉🎉</h2>
+                <p class="success-text">
+                    ¡Lo sabía! ¡Sabía que dirías que sí!
+                    <br>
+                    (como si tuvieras opción 😏💖)
+                </p>
+                <p class="success-subtext">
+                    Te amo con infinito!. Estos 5 años han sido los
+                    mejores de mi vida, y los que vienen serán aún mejores. 🌹
+                </p>
+                <div class="success-hearts">
+                    <span>💖</span><span>💕</span><span>💗</span><span>💝</span><span>💖</span>
+                </div>
+                <p class="redirect-text">
+                    Preparé algo especial para ti... 🎁
+                </p>
+                <button class="surprise-btn" id="surpriseBtn">
+                    <span>Ver Sorpresa</span>
+                    <span class="btn-sparkle">✨</span>
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
