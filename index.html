@@ -30,7 +30,7 @@
                     <div class="val-envelope"></div>
                     <div class="val-front"></div>
                     <div class="val-card">
-                        <div class="val-text">Para mi amorcito...</div>
+                        <div class="val-text">Feliz 5º Aniversario</div>
                         <div class="val-heart"></div>
                     </div>
                     <div class="val-hearts">
@@ -45,107 +45,193 @@
             </div>
         </section>
 
-        <!-- Letter Section -->
+        <!-- Letter Section (Book Format) -->
         <section class="letter-section hidden" id="letterSection">
-            <div class="letter-card">
-                <div class="letter-decoration top-left">✨</div>
-                <div class="letter-decoration top-right">✨</div>
-                <div class="letter-decoration bottom-left">💕</div>
-                <div class="letter-decoration bottom-right">💕</div>
-
-                <h1 class="letter-title">
-                    <span class="title-line">Mi Vida</span>
-                    <span class="title-heart">💖</span>
-                </h1>
-
-                <div class="letter-content">
-                    <p class="letter-paragraph fade-in-text">
-                        Han pasado <strong>5 años perfectos</strong> a tu lado.
-                        Cinco años de risas, de aventuras, de esos momentos que
-                        hacen que el corazón se acelere solo con verr tus ojitos de vaquita.
-                    </p>
-                    <p class="letter-paragraph fade-in-text">
-                        Cada día contigo ha sido un regalo, y no importa cuántos
-                        San Valentines pasen... siempre quiero que seas
-                        <strong>mi San Valentín</strong>. 🌹
-                    </p>
-                    <p class="letter-paragraph fade-in-text">
-                        Así que, después de 5 años de aguantarme
-                        <em>(que no es poco)</em>, tengo una pregunta
-                        MUY importante que hacerte...
-                    </p>
+            <div class="letter-book" id="letterBook">
+                <!-- Page 1: Cover -->
+                <div class="letter-page" style="z-index: 5;">
+                    <div class="page-front">
+                        <div class="page-content">
+                            <div class="letter-decoration top-left">✨</div>
+                            <div class="letter-decoration top-right">✨</div>
+                            <h1 class="letter-title">
+                                <span class="title-line">5 Años Contigo</span>
+                                <span class="title-heart">💖</span>
+                            </h1>
+                            <p class="click-hint">(Haz clic para abrir)</p>
+                        </div>
+                    </div>
+                    <div class="page-back">
+                        <div class="fold-corner"></div>
+                        <div class="page-photo-container">
+                            <div class="photo-frame" style="transform: rotate(3deg);">
+                                <img src="./photo1.jpeg" alt="Nosotros 1">
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <button class="continue-btn" id="continueBtn">
-                    <span>Continuar</span>
-                    <span class="arrow">→</span>
-                </button>
-            </div>
-        </section>
-
-        <!-- Question Section -->
-        <section class="question-section hidden" id="questionSection">
-            <div class="question-card">
-                <div class="question-rings">💗</div>
-                <h2 class="question-title">La Pregunta del Millón</h2>
-                <p class="question-text">
-                    ¿Quieres ser mi San Valentín?
-                </p>
-                <p class="question-subtitle">
-                    (por 5to año consecutivo, porque lo bueno no se cambia 😎)
-                </p>
-
-                <div class="buttons-container" id="buttonsContainer">
-                    <button class="yes-btn" id="yesBtn">
-                        <span class="btn-emoji">💝</span>
-                        <span>¡SÍ, QUIERO!</span>
-                    </button>
-                    <button class="no-btn" id="noBtn">
-                        <span class="btn-emoji">😢</span>
-                        <span>No...</span>
-                    </button>
+                <!-- Page 2 -->
+                <div class="letter-page" style="z-index: 4;">
+                    <div class="page-front">
+                        <div class="page-content"
+                            style="align-items: flex-start; text-align: left; padding: 40px 30px;">
+                            <p class="letter-paragraph" style="font-size: 0.9rem; line-height: 1.45;">
+                                Hola, mi vida hermosa. Hoy no es solo un aniversario; es mucho más que eso. Es media
+                                década juntos, cinco años que hemos elegido acompañarnos, escucharnos, conocernos,
+                                amarnos, querernos, apoyarnos y entendernos.
+                            </p>
+                            <p class="letter-paragraph" style="font-size: 0.9rem; line-height: 1.45;">
+                                Media década es mucho tiempo. En cinco años, un bebé pasa de nacer a caminar y
+                                empezar a ir a preescolar. Ocurren dos mundiales de fútbol, el mundo cambia por
+                                completo, pasando por una pandemia a la revolución de la IA. En cinco años, una relación
+                                puede pasar de la ilusión a la rutina, o de la amistad al amor profundo.
+                            </p>
+                            <p class="letter-paragraph" style="font-size: 0.9rem; line-height: 1.45;">
+                                En nuestro caso, ha sido así: pasamos de ser unos adolescentes a unos adultos completos.
+                                Sin embargo, siento que fue poco tiempo. Todavía me siento ese adolescente de 19 años
+                                que se enamoró perdidamente de ti.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="page-back">
+                        <div class="fold-corner"></div>
+                        <div class="page-photo-container">
+                            <div class="photo-frame" style="transform: rotate(-2deg);">
+                                <img src="./photo2.jpeg" alt="Nosotros 2">
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- Funny rejection messages -->
-                <div class="rejection-message hidden" id="rejectionMessage">
-                    <p class="rejection-text" id="rejectionText"></p>
+                <!-- Page 3 -->
+                <div class="letter-page" style="z-index: 3;">
+                    <div class="page-front">
+                        <div class="page-content"
+                            style="align-items: flex-start; text-align: left; padding: 40px 30px;">
+                            <p class="letter-paragraph" style="font-size: 0.85rem; line-height: 1.4;margin-top: 10;">
+                                Hoy, cinco años después, no puedo imaginar mi mañana sin ti. No puedo concebir un día
+                                sin tus ojitos, tu voz o tus tonterías. Tampoco puedo imaginar quién sería hoy si no
+                                fuera por ti. Por ti, volví a encontrarme con Dios. Me hiciste ver que sí podía ir a
+                                unas clases de confirmación y reafirmar mi fe, que para entonces estaba perdida. Me has
+                                convertido en un hombre más paciente, más fuerte, más amoroso y más comprensivo con los
+                                demás.
+                            </p>
+                            <p class="letter-paragraph" style="font-size: 0.85rem; line-height: 1.4;">
+                                Si me preguntas hoy, no puedo creer todo lo que hemos vivido juntos en cinco años. De
+                                verte todos los días en el metro a pasar una pandemia juntos, de citas hermosas y
+                                salidas a pasear a Wandis a comer heladitos e ir a comprar snacks en la Miranda, de
+                                salidas a Ávila e ir a fiestas y bodas, de las salidas a la playa y las tardes de
+                                películas, aunque fueran de Barbie... hasta visitar Italia contigo, no solo una, sino
+                                cinco ciudades. Es increíble para el André de hoy, imagina para ese niño de 19 años que
+                                se enamoró incondicionalmente de ti. Tambien 5 años es tiempo suficiente para haber
+                                tenido nuestras discusiones, te he hecho molestar y hemos pasado días difíciles. Pero
+                                sin importar qué, siempre encontramos la manera de resolverlo.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="page-back">
+                        <div class="fold-corner"></div>
+                        <div class="page-photo-container">
+                            <div class="photo-frame" style="transform: rotate(1deg);">
+                                <img src="./photo3.jpeg" alt="Nosotros 3">
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-                <!-- No counter -->
-                <div class="no-counter hidden" id="noCounter">
-                    <p>Intentos de decir que no: <span id="noCount">0</span> 🤣</p>
+                <!-- Page 4 -->
+                <div class="letter-page" style="z-index: 2;">
+                    <div class="page-front">
+                        <div class="page-content"
+                            style="align-items: flex-start; text-align: left; padding: 40px 30px;">
+                            <p class="letter-paragraph" style="font-size: 0.85rem; line-height: 1.4;">
+                                Hablamos,nos entenemos y
+                                nos vamos a dormir juntos amandonos como siempre porque sabemos que los problemas no son
+                                obstáculos, sino
+                                desafíos que podemos superar juntos como el equipo que somos.
+                                Durante estos años, te he escrito muchas cartas bonitas, expresando mi amor y gratitud
+                                por ser mi compañera de vida. Y esta no es la excepción. pero si tiene el peso y
+                                una historia de cinco años detrás, y me siento tonto por no poder expresar
+                                completamente lo que siento en palabras. Sin embargo, me consuela saber que intento
+                                demostrarte mi amor todos los días. Espero que algún día puedas entender lo mucho que me
+                                has enseñado en estos cinco años y en lo que te has convertido para mí: mi mejor amiga,
+                                mi novia, mi compañera de vida, mi rutina, mi tranquilidad, mi lugar seguro y mi
+                                confianza en un
+                                futuro perfecto.
+                            </p>
+                            <p class="letter-paragraph" style="font-size: 0.85rem; line-height: 1.4;">
+                                Y en lo mucho que me has transformado y ayudado en mi vida, son innumerables las
+                                virtudes que has creado en mí, el camino que me has ayudado a construir, el apoyo que
+                                has sido para mi vida en mis momentos más difíciles y oscuros, tú has estado ahí, siendo
+                                un faro de esperanza en mi camino, guiándome con el calor de un amor incondicional y
+                                verdadero. Le agradezco a Dios por el privilegio que me dio de permitirme ser tu novio,
+                                el novio de una niña perfecta, fiel, amorosa, increíble, artística, hermosa, con el
+                                corazón tan puro y repleto de amor bonito.
+                            </p>
+                        </div>
+                    </div>
+                    <div class="page-back">
+                        <div class="fold-corner"></div>
+                        <div class="page-photo-container">
+                            <div class="photo-frame" style="transform: rotate(-1deg);">
+                                <img src="./photo4.jpeg" alt="Nosotros 4">
+                            </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
-        </section>
 
-        <!-- Success Section -->
-        <section class="success-section hidden" id="successSection">
-            <div class="success-card">
-                <div class="confetti-container" id="confettiContainer"></div>
-                <h2 class="success-title">¡¡¡SÍÍÍÍ!!! 🎉🎉🎉</h2>
-                <p class="success-text">
-                    ¡Lo sabía! ¡Sabía que dirías que sí!
-                    <br>
-                    (como si tuvieras opción 😏💖)
-                </p>
-                <p class="success-subtext">
-                    Te amo con infinito!. Estos 5 años han sido los
-                    mejores de mi vida, y los que vienen serán aún mejores. 🌹
-                </p>
-                <div class="success-hearts">
-                    <span>💖</span><span>💕</span><span>💗</span><span>💝</span><span>💖</span>
+                <!-- Page 5 -->
+                <div class="letter-page" style="z-index: 1;">
+                    <div class="page-front">
+                        <div class="page-content"
+                            style="align-items: flex-start; text-align: left; padding: 40px 30px;">
+                            <p class="letter-paragraph"
+                                style="font-size: 0.9rem; line-height: 1.35; margin-bottom: 5px;">
+                                Sé que hoy, en un día tan especial, estamos lejos el uno del otro. Me duele no poder
+                                estar a tu lado... Pero me consuela pensar que quedan muchísimos más años por vivir a tu
+                                lado.
+                            </p>
+                            <p class="letter-paragraph"
+                                style="font-size: 0.9rem; line-height: 1.35; margin-bottom: 5px;">
+                                Como siempre te digo, te amo infinito. Gracias por amarme como nadie más, por
+                                soportarme, por verme con tanto amor y por soñar conmigo un futuro juntos. Gracias por
+                                ser tú. Gracias por acompañarme en mi carrera y estar ahí el día de mi defensa.
+                                Sencillamente sin ti, yo hoy no sería ni estaría donde estoy.
+                            </p>
+                            <p class="letter-paragraph"
+                                style="font-size: 0.9rem; line-height: 1.35; margin-bottom: 5px;">
+                                Gracias por creer en nuestro amor, gracias porque aunque estamos a más de 8,718
+                                kilómetros de distancia, te siento a ti y a tu amor a mi lado. Con lágrimas en los ojos
+                                y el corazón rarrugadito, te digo: gracias, gracias, y mil veces gracias.
+                            </p>
+                            <p class="letter-paragraph"
+                                style="font-size: 0.9rem; line-height: 1.35; margin-bottom: 10px; font-weight: bold;">
+                                Feliz aniversario, mi vida hermosa. Por muchísimos más años juntos. Te amo ojitos de
+                                vaquita.
+                            </p>
+                            <p class="letter-paragraph"
+                                style="font-size: 0.9rem; line-height: 1.35; margin-bottom: 10px; font-weight: bold;">
+                                Tu amorcito.
+                            </p>
+
+                            <div class="surprise-container"
+                                style="width: 100%; display: flex; justify-content: center; margin-top: 5px;">
+                                <button class="surprise-btn" id="surpriseBtn"
+                                    style="padding: 10px 20px; font-size: 0.9rem;">
+                                    <span>Ver Sorpresa</span>
+                                    <span class="btn-sparkle">✨</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="page-back">
+                        <div class="fold-corner"></div>
+                    </div>
                 </div>
-                <p class="redirect-text">
-                    Preparé algo especial para ti... 🎁
-                </p>
-                <button class="surprise-btn" id="surpriseBtn">
-                    <span>Ver Sorpresa</span>
-                    <span class="btn-sparkle">✨</span>
-                </button>
             </div>
         </section>
     </main>
-
     <script src="script.js"></script>
 </body>
 
