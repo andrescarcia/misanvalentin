@@ -458,18 +458,17 @@ body {
 .page-front,
 .page-back {
     position: absolute;
-    width: 100%;
-    height: 100%;
     top: 0;
     left: 0;
+    width: 100%;
+    height: 100%;
     backface-visibility: hidden;
-    border-radius: 4px;
-    border: 1px solid #dcd0c0;
+    border-radius: 5px 15px 15px 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     background: #fffdf8;
-    background: linear-gradient(to right, #e3d8c8 0%, #fffdf8 5%, #fffdf8 95%, #e3d8c8 100%);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-    pointer-events: auto;
-    /* Allow interaction */
+    background: linear-gradient(to right, #fffdf8 0%, #fffbf0 100%);
+    overflow: hidden;
+    /* CRITICAL: Hide overflowing text */
 }
 
 .page-front {
@@ -496,10 +495,13 @@ body {
     height: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
+    /* Changed from center to push text to top if long */
     align-items: center;
-    position: relative;
-    /* backface-visibility moved to faces */
+    padding: 30px;
+    box-sizing: border-box;
+    text-align: center;
+    /* Optional: overflow-y: auto; for desktop if needed, but risky for flip */
 }
 
 /* Fold Corner for "Going Back" */
@@ -723,37 +725,161 @@ body {
     display: none !important;
 }
 
+/* ========== PAGE CONTENT ========== */
+.page-front,
+.page-back {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 5px 15px 15px 5px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    background: #fffdf8;
+    background: linear-gradient(to right, #fffdf8 0%, #fffbf0 100%);
+    overflow: hidden;
+    /* Hide anything that might spill */
+}
+
+.page-content {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* Center content vertically now that it's just one paragraph */
+    align-items: center;
+    padding: 35px 25px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.letter-paragraph {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-dark);
+    width: 100%;
+}
+
 /* ========== MEDIA QUERIES ========== */
 @media (max-width: 600px) {
+
+    /* Scale down the envelope section to fit */
+    .val-container {
+        transform: scale(0.75);
+    }
+
+    /* Main container adjustments */
+    .main-wrapper {
+        padding: 5px;
+        overflow-x: hidden;
+        /* Prevent horizontal scroll */
+        /* Ensure minimum height for the taller book */
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
     .letter-book {
-        width: 300px;
-        height: 450px;
+        /* Use viewport width but cap it */
+        width: 85vw;
+        max-width: 340px;
+        /* height needs to be taller for text */
+        height: 480px;
+        /* Can be slightly shorter now since text is split */
     }
 
+    /* Page Content Padding */
     .page-content {
-        padding: 20px;
+        padding: 30px 20px;
     }
 
+    /* Typography Adjustments */
     .title-line {
         font-size: 2.2rem;
     }
 
     .page-title {
-        font-size: 1.8rem;
+        font-size: 1.6rem;
     }
 
     .letter-paragraph {
+        font-size: 0.95rem !important;
+        /* Larger and more readable on mobile now! */
+        line-height: 1.5 !important;
+        margin-bottom: 8px;
+    }
+
+    /* Photo Frame Responsive - Use percentage to fit inside the 85vw book */
+    .photo-frame {
+        width: 80%;
+        height: 60%;
+        /* Relative to page height */
+        /* Reset fixed dimensions */
+        max-width: none;
+        max-height: none;
+        padding: 8px 8px 30px 8px;
+    }
+
+    /* Adjust decorations to take less space */
+    .letter-decoration {
         font-size: 1rem;
+    }
+
+    .top-left {
+        top: 10px;
+        left: 10px;
+    }
+
+    .top-right {
+        top: 10px;
+        right: 10px;
+    }
+
+    .bottom-left {
+        bottom: 10px;
+        left: 10px;
+    }
+
+    .bottom-right {
+        bottom: 10px;
+        right: 10px;
     }
 }
 
-@media (max-width: 350px) {
+@media (max-width: 380px) {
+
+    /* Scale envelope even more for very small screens */
+    .val-container {
+        transform: scale(0.65);
+    }
+
     .letter-book {
-        width: 280px;
-        height: 400px;
+        height: 440px;
+        /* Taller on small screens too */
+        width: 88vw;
+    }
+
+    .page-content {
+        padding: 15px 12px;
+        /* Very tight padding */
     }
 
     .title-line {
         font-size: 1.8rem;
+    }
+
+    .letter-paragraph {
+        font-size: 0.85rem !important;
+        line-height: 1.3 !important;
+        margin-bottom: 6px;
+    }
+
+    .photo-frame {
+        width: 80%;
+        height: 50%;
     }
 }
